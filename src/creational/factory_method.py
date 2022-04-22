@@ -35,6 +35,8 @@ class Product(ABC):
 '''
 Definindo as classes concretas que implementam o Criador e Produto abstratos
 '''
+
+
 class ConcreteCreatorOne(Creator):
     def create(self):
         return ConcreteProductOne()
@@ -62,7 +64,7 @@ if __name__ == '__main__':
         quaisquer implementações concretas de Creator ou Product, apenas
         suas abstraçoes
         '''
-        print(f'{creator.create().operation()}') # Usando cadeia por simplicidade
+        print(f'{creator.create().operation()}')  # Usando cadeia por simplicidade
 
     client(ConcreteCreatorOne())
     client(ConcreteCreatorTwo())

@@ -40,6 +40,7 @@ class ConcreteBuilderOne(Builder):
     negócio definida pela classe Builder abstrata, providenciando uma
     forma concreta e aplicável de criar nocos produtos
     '''
+
     def __init__(self):
         self.reset()
 
@@ -92,6 +93,7 @@ class ConcreteBuilderOneChain(Builder):
     cadeia de demeter, embora esse método tenha caído em desuso, considerado
     um anti-padrão
     '''
+
     def produce_part_a(self):
         self.__product.add('Part A')
         return self
@@ -133,7 +135,7 @@ if __name__ == '__main__':
     # Produtos montados pelo mesmo builder porém com partes diferenets
     print(product_ab.parts)
     print(product_c.parts)
-    
+
     # Construindo um produto usando uma cadeia de deméter
     builder_one_chain = ConcreteBuilderOneChain()
     builder_one_chain.produce_part_a().produce_part_b().produce_part_c()

@@ -8,6 +8,7 @@ class Decorator(ABC):
     objetos que irão receber as novas funcionalidades com um objeto ou
     uma classe que contenha esses comportamentos.
     '''
+
     def __init__(self, component):
         self.__component = component
 
@@ -61,6 +62,6 @@ if __name__ == '__main__':
     decorated_component_two = ConcreteDecoratorTwo(component)
 
     print(component.operation())
-    print(decorated_component_one.operation()) 
-    print(decorated_component_one.new_operation()) 
+    print(decorated_component_one.operation())
+    print(decorated_component_one.new_operation())
     print(decorated_component_two.operation())

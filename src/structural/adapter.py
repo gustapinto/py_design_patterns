@@ -5,6 +5,7 @@ class Target:
     '''
     A classe principal, para qual outros objetos devem ser adaptados
     '''
+
     def request(self):
         return 'I am a request'
 
@@ -14,6 +15,7 @@ class Adaptee:
     Uma classe que deve ser adaptada para lidar com a interface do objeto
     principal
     '''
+
     def weird_request(self):
         return 'Sooo, i am a very very specific request'
 
@@ -25,6 +27,7 @@ class AdapterToTarget(Adaptee):
     possam interoperar, criando uma interface que sirva como "tradutor"
     para qualquer objeto compatível com ela
     '''
+
     def request(self) -> str:
         return f'Adapted - {self.weird_request()}'
 

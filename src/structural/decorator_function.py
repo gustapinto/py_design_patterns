@@ -13,7 +13,7 @@ def decorator(func):
     return wrapper
 
 
-@decorator # Aplicando decoradores na definição da função
+@decorator  # Aplicando decoradores na definição da função
 def operation_one():
     return 'operation one'
 
