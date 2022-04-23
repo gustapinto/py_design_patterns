@@ -76,6 +76,13 @@ class ConcreteObserverTwo(Observer):
 
 
 class ConcreteSubject(Subject):
+    '''
+    Os observáveis concretos são os responsáveis por definir quando e 
+    porquê os observadores serão notificados, normalmente apenas uma
+    fração do observável é responsável por lidar com os observadores, com
+    o resto de seu código fonte implementando as regas de negócio.
+    '''
+
     def __init__(self):
         self.__state = None
         super().__init__()
@@ -93,6 +100,9 @@ class ConcreteSubject(Subject):
         '''
         self.__state = state
         self.notify()
+
+    def operation(self):
+        return 'A important operation'
 
 
 if __name__ == '__main__':
@@ -112,3 +122,5 @@ if __name__ == '__main__':
     subject.detach_all()
 
     subject.state = 'another new state'
+
+    print(subject.operation())
